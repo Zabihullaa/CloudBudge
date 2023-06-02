@@ -2,6 +2,7 @@ const btn = document.querySelector(".menu");
 const close = document.querySelector(".close");
 const navList = document.querySelector(".nav__list");
 const basket = document.querySelector(".basket");
+const navLink = document.querySelectorAll(".nav__link");
 const baskenavLanguageChooset = document.querySelector(".nav__language-choose");
 const navLanguage = document.querySelectorAll(".nav__language");
 const login = document.querySelector(".login");
@@ -44,4 +45,9 @@ login__input.forEach((item) => {
     item.value = "";
     loginacc.style.transform = "translateX(-110%)";
   });
+});
+navLink.forEach(el => {
+  el.addEventListener("click" , function () {
+    navList.style.transform = "translateX(-110%)";
+  })
 });
